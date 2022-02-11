@@ -1,10 +1,11 @@
 import './App.css';
+import ProductPage from './components/ProductPage.jsx'
 
 function App() {
   return (
     <div className="App">
       <header>
-        <h1>Sneaker Company</h1>
+        <ProductPage />
       </header>
     </div>
   );
