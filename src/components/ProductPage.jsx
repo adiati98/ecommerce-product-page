@@ -7,7 +7,7 @@ import ProductImages from './ProductImages'
 const ProductPage = () => {
   return (
     <main>
-      <ProductImages />
+      <ProductImages images={data.productImages}/>
       <ProductDetails item={data}/>
     </main>
   )
