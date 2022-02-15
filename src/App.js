@@ -5,10 +5,8 @@ import ProductPage from './components/ProductPage.jsx'
 function App() {
   return (
     <div className="App">
-      <header>
         <Navbar />
         <ProductPage />
-      </header>
     </div>
   );
 }

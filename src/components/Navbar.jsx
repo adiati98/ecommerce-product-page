@@ -3,7 +3,7 @@ import cart from "../assets/images/icon-cart.svg";
 import avatar from "../assets/images/image-avatar.png";
 const Navbar = () => {
   return (
-    <>
+    <header>
       <img src={logo} alt="sneakers-logo" />
       <nav>
         <ul>
@@ -16,7 +16,7 @@ const Navbar = () => {
       </nav>
       <img src={cart} alt="cart" />
       <img src={avatar} alt="avatar" />
-    </>
+    </header>
   );
 };
 
