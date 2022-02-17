@@ -6,10 +6,10 @@ import ProductImages from './ProductImages'
 
 const ProductPage = () => {
   return (
-    <>
-      <ProductImages />
+    <main>
+      <ProductImages images={data.productImages}/>
       <ProductDetails item={data}/>
-    </>
+    </main>
   )
 }
 
