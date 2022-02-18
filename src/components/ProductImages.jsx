@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 
 const ProductImages = ({images}) => {
-  const [image, setImage] = useState(images.product1);
+  const [image, setImage] = useState(images[0].productPic);
 
   return (
 			<>
