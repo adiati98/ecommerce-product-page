@@ -1,16 +1,21 @@
 //data
-import data from '../data'
+import { useState } from "react";
+import data from "../data";
+import ImageModal from "./ImageModal";
 //components
-import ProductDetails from './ProductDetails'
-import ProductImages from './ProductImages'
+import ProductDetails from "./ProductDetails";
+import ProductImages from "./ProductImages";
 
 const ProductPage = () => {
+  const [isOpened, setIsOpened] = useState(false);
+
   return (
     <main>
-      <ProductImages images={data.productImages}/>
-      <ProductDetails item={data}/>
+      {isOpened && <ImageModal images={data.productImages} />}
+      <ProductImages images={data.productImages} setIsOpened={setIsOpened} />
+      <ProductDetails item={data} />
     </main>
-  )
-}
+  );
+};
 
-export default ProductPage
+export default ProductPage;
