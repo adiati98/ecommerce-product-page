@@ -1,11 +1,11 @@
-import ProductImages from "./ProductImages";
+import ProductImages from './ProductImages'
 
-const ImageModal = ({ images }) => {
-  return (
-    <div>
-      <ProductImages images={images} />
-    </div>
-  );
-};
+const ImageModal = ({ imageModal }) => {
+	return (
+		<div>
+			<ProductImages images={imageModal} />
+		</div>
+	)
+}
 
-export default ImageModal;
+export default ImageModal
