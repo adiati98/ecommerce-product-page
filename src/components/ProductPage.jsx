@@ -1,14 +1,19 @@
 //data
+import { useState } from 'react'
 import data from '../data'
+import ImageModal from './ImageModal'
 //components
 import ProductDetails from './ProductDetails'
 import ProductImages from './ProductImages'
 import PurchasePlan from './PurchasePlan'
 
 const ProductPage = () => {
+	const [isOpened, setIsOpened] = useState(false)
+
 	return (
 		<main>
-			<ProductImages images={data.productImages} />
+			{isOpened && <ImageModal imageModal={data.productImages} />}
+			<ProductImages images={data.productImages} setIsOpened={setIsOpened} />
 			<ProductDetails item={data} />
 			<PurchasePlan />
 		</main>
