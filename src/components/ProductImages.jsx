@@ -8,7 +8,7 @@ const ProductImages = ({ images, setIsOpened, arrows }) => {
 
   const moveToNextImage = () => {
     if (index === 3) {
-      setIndex(0);
+      return;
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
@@ -16,7 +16,7 @@ const ProductImages = ({ images, setIsOpened, arrows }) => {
 
   const moveToPreviousImage = () => {
     if (index === 0) {
-      setIndex(3);
+      return;
     } else {
       setIndex((prevIndex) => prevIndex - 1);
     }
@@ -39,10 +39,13 @@ const ProductImages = ({ images, setIsOpened, arrows }) => {
         <img src={image} alt="" onClick={() => setIsOpened(true)} />
       </div>
       <div className="thumbnails">
-        {images.map((product) => (
+        {images.map((product, index) => (
           <img
             src={product.thumbnail}
-            onClick={() => setImage(product.productPic)}
+            onClick={() => {
+              setImage(product.productPic);
+              setIndex(index);
+            }}
             alt=""
           />
         ))}
