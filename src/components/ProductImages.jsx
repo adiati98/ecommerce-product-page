@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import nextArrow from "../assets/images/icon-next.svg";
 import previousArrow from "../assets/images/icon-previous.svg";
 
@@ -10,7 +10,9 @@ const ProductImages = ({ images, setIsOpened, arrows }) => {
     if (index === 3) {
       return;
     } else {
-      setIndex((prevIndex) => prevIndex + 1);
+      const newIndex = index + 1;
+      setIndex(newIndex);
+      setImage(images[newIndex].productPic);
     }
   };
 
@@ -18,13 +20,11 @@ const ProductImages = ({ images, setIsOpened, arrows }) => {
     if (index === 0) {
       return;
     } else {
-      setIndex((prevIndex) => prevIndex - 1);
+      const newIndex = index - 1;
+      setIndex(newIndex);
+      setImage(images[newIndex].productPic);
     }
   };
-
-  useEffect(() => {
-    setImage(images[index].productPic);
-  }, [index, images]);
 
   return (
     <>
