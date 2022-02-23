@@ -1,4 +1,7 @@
 import shoppingCart from '../assets/images/icon-cart.svg'
+import plus from '../assets/images/icon-plus.svg'
+import minus from '../assets/images/icon-minus.svg'
+
 import { useState } from 'react'
 
 const PurchasePlan = () => {
@@ -18,9 +21,13 @@ const PurchasePlan = () => {
 
 	return (
 		<>
-			<button onClick={decreaseQuantity}>-</button>
+			<button onClick={decreaseQuantity}>
+				<img src={minus} alt='minus' />
+			</button>
 			<span>{quantity}</span>
-			<button onClick={increaseQuantity}>+</button>
+			<button onClick={increaseQuantity}>
+				<img src={plus} alt='plus' />
+			</button>
 
 			<button type='submit'>
 				<img src={shoppingCart} alt='Shopping cart icon' />
