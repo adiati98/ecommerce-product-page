@@ -18,18 +18,22 @@ const data = {
 		{
 			productPic: product1,
 			thumbnail: productThumbnail1,
+			id: 1,
 		},
 		{
 			productPic: product2,
 			thumbnail: productThumbnail2,
+			id: 2,
 		},
 		{
 			productPic: product3,
 			thumbnail: productThumbnail3,
+			id: 3,
 		},
 		{
 			productPic: product4,
 			thumbnail: productThumbnail4,
+			id: 4,
 		},
 	],
 }

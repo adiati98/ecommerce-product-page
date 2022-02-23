@@ -41,6 +41,7 @@ const ProductImages = ({ images, setIsOpened, arrows }) => {
       <div className="thumbnails">
         {images.map((product, index) => (
           <img
+            key={product.id}
             src={product.thumbnail}
             onClick={() => {
               setImage(product.productPic);
