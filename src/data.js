@@ -18,18 +18,38 @@ const data = {
 		{
 			productPic: product1,
 			thumbnail: productThumbnail1,
+			altText:
+				'A white and light brown color sneaker view from side and the other pair bottom view',
+			thumbnailAltText:
+				'Thumbnail of a white and light brown color sneaker view from side and the other pair bottom view',
+			id: 1,
 		},
 		{
 			productPic: product2,
 			thumbnail: productThumbnail2,
+			altText:
+				'Back view of a white and light brown color sneaker on a stack of white rocks and the other pair in standing position next to it',
+			thumbnailAltText:
+				'Thumbnail of back view of a white and light brown color sneaker on a stack of white rocks and the other pair in standing position next to it',
+			id: 2,
 		},
 		{
 			productPic: product3,
 			thumbnail: productThumbnail3,
+			altText:
+				'Outer side view of a white and light brown color sneaker on a stack of white rocks',
+			thumbnailAltText:
+				'Thumbnail of outer side view of a white and light brown color sneaker on a stack of white rocks',
+			id: 3,
 		},
 		{
 			productPic: product4,
 			thumbnail: productThumbnail4,
+			altText:
+				'Inner side view of a white and light brown color sneaker on a stack of white rocks',
+			thumbnailAltText:
+				'Thumbnail of inner side view of a white and light brown color sneaker on a stack of white rocks',
+			id: 4,
 		},
 	],
 }
