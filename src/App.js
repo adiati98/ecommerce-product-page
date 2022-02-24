@@ -1,12 +1,19 @@
 import './App.css'
+import { useState } from 'react'
+
 import Navbar from './components/Navbar'
 import ProductPage from './components/ProductPage.jsx'
+import CartModal from './components/CartModal.jsx'
 import Footer from './components/Footer.jsx'
 
 function App() {
+	const [cartIsOpened, setCartIsOpened] = useState(false)
+	const [purchased, setPurchased] = useState(null)
+
 	return (
 		<div className='App'>
-			<Navbar />
+			<Navbar cartIsClicked={setCartIsOpened} />
+			{cartIsOpened && <CartModal purchased={purchased} />}
 			<ProductPage />
 			<Footer />
 		</div>
