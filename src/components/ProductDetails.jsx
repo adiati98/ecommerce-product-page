@@ -1,6 +1,6 @@
 import PurchasePlan from './PurchasePlan'
 
-const ProductDetails = ({ item }) => {
+const ProductDetails = ({ item, updatePurchased }) => {
 	const applyDiscount = () => {
 		return (item.price - item.price * (item.discount / 100)).toFixed(2)
 	}
@@ -15,7 +15,7 @@ const ProductDetails = ({ item }) => {
 			<p>{item.discount}%</p>
 			<p>${item.price}</p>
 
-			<PurchasePlan />
+			<PurchasePlan updatePurchased={updatePurchased} title={item.collection} discountedPrice={applyDiscount()} thumbnail={item.productImages[0].thumbnail}/>
 		</>
 	)
 }

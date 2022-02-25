@@ -14,7 +14,7 @@ function App() {
 		<div className='App'>
 			<Navbar cartIsClicked={setCartIsOpened} />
 			{cartIsOpened && <CartModal purchased={purchased} />}
-			<ProductPage />
+			<ProductPage updatePurchased={setPurchased} />
 			<Footer />
 		</div>
 	)
