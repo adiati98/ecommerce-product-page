@@ -15,7 +15,13 @@ const ProductDetails = ({ item, updatePurchased }) => {
 			<p>{item.discount}%</p>
 			<p>${item.price}</p>
 
-			<PurchasePlan updatePurchased={updatePurchased} title={item.collection} discountedPrice={applyDiscount()} thumbnail={item.productImages[0].thumbnail}/>
+			<PurchasePlan
+				updatePurchased={updatePurchased}
+				title={item.collection}
+				discountedPrice={applyDiscount()}
+				thumbnail={item.productImages[0].thumbnail}
+				thumbnailAltText={item.productImages[0].thumbnailAltText}
+			/>
 		</>
 	)
 }
