@@ -23,9 +23,7 @@ const CartModal = ({ purchased, updatePurchased }) => {
 					<button onClick={clearCart}>
 						<img src={trashBin} alt='delete' />
 					</button>
-          <button>
-            Checkout
-          </button>
+					<button>Checkout</button>
 				</>
 			)}
 		</>
