@@ -4,7 +4,13 @@ import minus from '../assets/images/icon-minus.svg'
 
 import { useState } from 'react'
 
-const PurchasePlan = ({ updatePurchased, title, discountedPrice, thumbnail }) => {
+const PurchasePlan = ({
+	updatePurchased,
+	title,
+	discountedPrice,
+	thumbnail,
+	thumbnailAltText,
+}) => {
 	const [quantity, setQuantity] = useState(0)
 
 	const increaseQuantity = () => {
@@ -20,12 +26,13 @@ const PurchasePlan = ({ updatePurchased, title, discountedPrice, thumbnail }) =>
 	}
 
 	const handleSubmit = () => {
-		updatePurchased(prevState => ({
+		updatePurchased((prevState) => ({
 			...prevState,
 			quantity,
 			title,
 			discountedPrice,
-			thumbnail
+			thumbnail,
+			thumbnailAltText,
 		}))
 	}
 
