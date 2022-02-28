@@ -1,7 +1,8 @@
 import logo from "../assets/images/logo.svg";
 import cart from "../assets/images/icon-cart.svg";
 import avatar from "../assets/images/image-avatar.png";
-const Navbar = () => {
+
+const Navbar = ({ cartIsClicked }) => {
   return (
     <header>
       <img src={logo} alt="sneakers-logo" />
@@ -14,7 +15,7 @@ const Navbar = () => {
           <li>contact</li>
         </ul>
       </nav>
-      <img src={cart} alt="cart" />
+      <img src={cart} alt="cart" onClick={cartIsClicked}/>
       <img src={avatar} alt="avatar" />
     </header>
   );

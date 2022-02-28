@@ -4,7 +4,13 @@ import minus from '../assets/images/icon-minus.svg'
 
 import { useState } from 'react'
 
-const PurchasePlan = () => {
+const PurchasePlan = ({
+	updatePurchased,
+	title,
+	discountedPrice,
+	thumbnail,
+	thumbnailAltText,
+}) => {
 	const [quantity, setQuantity] = useState(0)
 
 	const increaseQuantity = () => {
@@ -19,6 +25,17 @@ const PurchasePlan = () => {
 		}
 	}
 
+	const handleSubmit = () => {
+		updatePurchased((prevState) => ({
+			...prevState,
+			quantity,
+			title,
+			discountedPrice,
+			thumbnail,
+			thumbnailAltText,
+		}))
+	}
+
 	return (
 		<>
 			<button onClick={decreaseQuantity}>
@@ -29,7 +46,7 @@ const PurchasePlan = () => {
 				<img src={plus} alt='plus' />
 			</button>
 
-			<button type='submit'>
+			<button onClick={handleSubmit}>
 				<img src={shoppingCart} alt='Shopping cart icon' />
 				Add to chart
 			</button>
