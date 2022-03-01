@@ -34,6 +34,7 @@ const PurchasePlan = ({
 			thumbnail,
 			thumbnailAltText,
 		}))
+		setQuantity(0)
 	}
 
 	return (
