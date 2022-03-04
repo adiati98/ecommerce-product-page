@@ -1,4 +1,5 @@
 import trashBin from '../assets/images/icon-delete.svg'
+import Button from 'react-bootstrap/Button'
 
 const CartModal = ({ purchased, updatePurchased }) => {
 	const clearCart = () => {
@@ -23,7 +24,7 @@ const CartModal = ({ purchased, updatePurchased }) => {
 					<button onClick={clearCart}>
 						<img src={trashBin} alt='delete' />
 					</button>
-					<button>Checkout</button>
+					<Button variant="danger">Checkout</Button>
 				</>
 			)}
 		</>
