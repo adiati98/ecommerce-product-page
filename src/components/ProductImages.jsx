@@ -2,6 +2,8 @@ import { useState } from 'react'
 import nextArrow from '../assets/images/icon-next.svg'
 import previousArrow from '../assets/images/icon-previous.svg'
 
+import { Image } from 'react-bootstrap'
+
 const ProductImages = ({ images, setIsOpened, arrows }) => {
 	const [index, setIndex] = useState(0)
 	const [image, setImage] = useState(images[0].productPic)
@@ -37,11 +39,12 @@ const ProductImages = ({ images, setIsOpened, arrows }) => {
 				/>
 			)}
 			<div>
-				<img src={image} alt={altText} onClick={() => setIsOpened(true)} />
+				<Image fluid src={image} alt={altText} onClick={() => setIsOpened(true)} />
 			</div>
-			<div className='thumbnails'>
+			<div className='thumbnails d-flex flex-row justify-content-between'>
 				{images.map((product, index) => (
-					<img
+					<Image
+						className='thumbnail d-none d-sm-block'
 						key={product.id}
 						src={product.thumbnail}
 						onClick={() => {

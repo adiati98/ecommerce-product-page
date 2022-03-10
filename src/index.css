@@ -1,28 +1,114 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Kumbh Sans", sans-serif;
-  font-size: 16px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 16px;
 }
-:root {
-  /* primary color */
-  --orange: #ff7d1a;
-  --pale-orange: #ffede0;
 
-  /* neutral color */
-  --very-dark-blue: #1d2025;
-  --dark-grayish-blue: #68707d;
-  --grayish-blue: #b6bcc8;
-  --light-grayish-blue: #f7f8fd;
-  --white: #ffffff;
-  --black-opacity: rgba(0, 0, 0, 0.75);
+:root {
+	/* primary color */
+	--orange: #ff7d1a;
+	--pale-orange: #ffede0;
+
+	/* neutral color */
+	--very-dark-blue: #1d2025;
+	--dark-grayish-blue: #68707d;
+	--grayish-blue: #b6bcc8;
+	--light-grayish-blue: #f7f8fd;
+	--white: #ffffff;
+	--black-opacity: rgba(0, 0, 0, 0.75);
 }
+
 body {
-  width: 100%;
-  min-height: 100vh;
+	width: 100%;
+	min-height: 100vh;
+	background: var(--light-grayish-blue);
+}
+
+/* navbar */
+
+.navbar {
+	border-bottom: 1px solid var(--grayish-blue);
+  padding-right: 1em;
 }
 
 .links {
-  width: 40%;
+	width: 40%;
+}
+
+/* product page */
+
+img {
+	border-radius: 10px;
+}
+
+.product-page {
+	margin-top: 5em;
+}
+
+/* product images */
+
+.thumbnails {
+	margin-top: 2.5em;
+	margin-bottom: 3em;
+}
+
+.thumbnail {
+	width: 20%;
+}
+
+/* product details */
+
+.product-details {
+	margin-left: 4.8em;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.company-name,
+.item-discount {
+	color: var(--orange);
+}
+
+.company-name {
+	font-size: 1rem;
+	text-transform: uppercase;
+}
+
+.item-collection {
+	color: var(--very-dark-blue);
+	font-size: 3rem;
+}
+
+.item-description {
+  font-size: 18px;
+}
+
+.item-description,
+.item-price {
+	color: var(--dark-grayish-blue);
+}
+
+.applied-discount {
+	font-size: 1.5rem;
+}
+
+.item-discount {
+	background-color: var(--pale-orange);
+	margin-left: 1em;
+	padding: 0.5em;
+	border-radius: 10px;
+}
+
+.item-price {
+	text-decoration: line-through;
+}
+
+@media (max-width: 768px) {
+	.product-details {
+		margin: 0 2em;
+	}
 }

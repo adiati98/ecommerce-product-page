@@ -6,17 +6,27 @@ import ImageModal from './ImageModal'
 import ProductDetails from './ProductDetails'
 import ProductImages from './ProductImages'
 
+import { Container, Row, Col } from 'react-bootstrap'
+
 const ProductPage = ({ updatePurchased }) => {
 	const [isOpened, setIsOpened] = useState(false)
 
 	return (
-		<main>
-			{isOpened && (
-				<ImageModal imageModal={data.productImages} setIsOpened={setIsOpened} />
-			)}
-			<ProductImages images={data.productImages} setIsOpened={setIsOpened} />
-			<ProductDetails item={data} updatePurchased={updatePurchased} />
-		</main>
+		<Container className='product-page'>
+			<main>
+				<Row>
+					<Col md={5} className='mx-auto'>
+						{isOpened && (
+							<ImageModal imageModal={data.productImages} setIsOpened={setIsOpened} />
+						)}
+						<ProductImages images={data.productImages} setIsOpened={setIsOpened} />
+					</Col>
+					<Col className='my-auto'>
+						<ProductDetails item={data} updatePurchased={updatePurchased} />
+					</Col>
+				</Row>
+			</main>
+		</Container>
 	)
 }
 
