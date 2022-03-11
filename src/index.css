@@ -145,3 +145,29 @@ img {
   border: none;
   background-color: var(--white);
 }
+/* modal */
+
+.my-modal {
+  position: absolute;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  background-color: var(--black-opacity);
+}
+
+.my-modal-content {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.close-btn {
+  align-self: flex-end;
+  margin-right: 1rem;
+  background-color: inherit;
+  border: none;
+}

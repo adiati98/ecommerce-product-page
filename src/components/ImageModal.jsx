@@ -1,13 +1,17 @@
-import ProductImages from './ProductImages'
-import close from '../assets/images/icon-close.svg'
+import ProductImages from "./ProductImages";
+import close from "../assets/images/icon-close.svg";
 
 const ImageModal = ({ imageModal, setIsOpened }) => {
-	return (
-		<div>
-			<img src={close} alt='close' onClick={() => setIsOpened(false)} />
-			<ProductImages images={imageModal} modal />
-		</div>
-	)
-}
+  return (
+    <div className="my-modal">
+      <div className="my-modal-content">
+        <button className="close-btn mb-3" onClick={() => setIsOpened(false)}>
+          <img src={close} alt="close" />
+        </button>
+        <ProductImages images={imageModal} modal />
+      </div>
+    </div>
+  );
+};
 
-export default ImageModal
+export default ImageModal;
