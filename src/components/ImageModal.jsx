@@ -5,7 +5,7 @@ const ImageModal = ({ imageModal, setIsOpened }) => {
 	return (
 		<div>
 			<img src={close} alt='close' onClick={() => setIsOpened(false)} />
-			<ProductImages images={imageModal} arrows />
+			<ProductImages images={imageModal} modal />
 		</div>
 	)
 }

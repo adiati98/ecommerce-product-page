@@ -4,10 +4,15 @@ import previousArrow from '../assets/images/icon-previous.svg'
 
 import { Image } from 'react-bootstrap'
 
-const ProductImages = ({ images, setIsOpened, arrows }) => {
+const ProductImages = ({ images, setIsOpened, modal }) => {
 	const [index, setIndex] = useState(0)
 	const [image, setImage] = useState(images[0].productPic)
 	const [altText, setAltText] = useState(images[0].altText)
+
+	let arrowStyle = ''
+	if (!modal) {
+		arrowStyle = 'd-block d-sm-none'
+	}
 
 	const moveToNextImage = () => {
 		if (index === 3) {
@@ -31,15 +36,16 @@ const ProductImages = ({ images, setIsOpened, arrows }) => {
 
 	return (
 		<>
-			{arrows && (
-				<img
-					src={previousArrow}
-					alt='previous arrow'
-					onClick={moveToPreviousImage}
-				/>
-			)}
-			<div>
-				<Image fluid src={image} alt={altText} onClick={() => setIsOpened(true)} />
+			<div className='d-flex align-items-center'>
+				<button className={arrowStyle} onClick={moveToPreviousImage}>
+					<img src={previousArrow} alt='previous arrow' />
+				</button>
+				<div onClick={() => setIsOpened(true)}>
+					<Image fluid src={image} alt={altText} />
+				</div>
+				<button className={arrowStyle} onClick={moveToNextImage}>
+					<img src={nextArrow} alt='next arrow' />
+				</button>
 			</div>
 			<div className='thumbnails d-flex flex-row justify-content-between'>
 				{images.map((product, index) => (
@@ -56,9 +62,6 @@ const ProductImages = ({ images, setIsOpened, arrows }) => {
 					/>
 				))}
 			</div>
-			{arrows && (
-				<img src={nextArrow} alt='next arrow' onClick={moveToNextImage} />
-			)}
 		</>
 	)
 }
