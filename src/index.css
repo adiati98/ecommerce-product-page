@@ -43,7 +43,7 @@ body {
   color: var(--white);
   border: none;
   border-radius: 10px;
-  padding: 0.5em;
+  padding: 0.7em 4em;
 }
 
 /* product page */
@@ -170,4 +170,24 @@ img {
   margin-right: 1rem;
   background-color: inherit;
   border: none;
+}
+
+/* purshase component */
+.purshase-btn {
+  background-color: var(--light-grayish-blue);
+  padding: 1em;
+  border: none;
+}
+.orange-btn img {
+  fill: var(--white);
+}
+
+@media (max-width: 768px) {
+  .quantity {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .fill {
+    flex-grow: 1;
+  }
 }
