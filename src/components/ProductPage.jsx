@@ -15,13 +15,13 @@ const ProductPage = ({ updatePurchased }) => {
 		<Container className='product-page'>
 			<main>
 				<Row>
-					<Col md={5} className='mx-auto'>
+					<Col md={6} className='product-images-column'>
 						{isOpened && (
 							<ImageModal imageModal={data.productImages} setIsOpened={setIsOpened} />
 						)}
 						<ProductImages images={data.productImages} setIsOpened={setIsOpened} />
 					</Col>
-					<Col className='my-auto'>
+					<Col className='product-details-column'>
 						<ProductDetails item={data} updatePurchased={updatePurchased} />
 					</Col>
 				</Row>

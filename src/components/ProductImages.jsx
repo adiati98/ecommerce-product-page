@@ -37,14 +37,20 @@ const ProductImages = ({ images, setIsOpened, modal }) => {
 	return (
 		<>
 			<div className='d-flex align-items-center'>
-				<button className={arrowStyle} onClick={moveToPreviousImage}>
-					<img src={previousArrow} alt='previous arrow' />
+				<button
+					className={`${arrowStyle} btn-left-arrow`}
+					onClick={moveToPreviousImage}
+				>
+					<img className="arrow" src={previousArrow} alt='previous arrow' />
 				</button>
 				<div onClick={() => setIsOpened(true)}>
 					<Image fluid src={image} alt={altText} />
 				</div>
-				<button className={arrowStyle} onClick={moveToNextImage}>
-					<img src={nextArrow} alt='next arrow' />
+				<button
+					className={`${arrowStyle} btn-right-arrow`}
+					onClick={moveToNextImage}
+				>
+					<img className="arrow" src={nextArrow} alt='next arrow' />
 				</button>
 			</div>
 			<div className='thumbnails d-flex flex-row justify-content-between'>
