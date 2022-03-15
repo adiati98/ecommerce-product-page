@@ -5,11 +5,11 @@ import { Navbar, Nav } from "react-bootstrap";
 
 const NavBar = ({ setCartIsOpened }) => {
   return (
-    <Navbar bg="light" expand="md" className="d-flex">
+    <Navbar bg="light" expand="md" className="d-flex flex-nowrap">
+      <Navbar.Toggle className="ms-2" />
       <Navbar.Brand className="mb-2 px-5 align-self-center">
         <img src={logo} alt="sneakers-logo" />
       </Navbar.Brand>
-      <Navbar.Toggle />
       <Navbar.Collapse>
         <Nav className="d-flex align-items-center justify-content-evenly me-auto links">
           <Nav.Link>Collections</Nav.Link>
@@ -18,19 +18,19 @@ const NavBar = ({ setCartIsOpened }) => {
           <Nav.Link>About</Nav.Link>
           <Nav.Link>contact</Nav.Link>
         </Nav>
-        <Nav className="px-5 d-flex align-items-center">
-          <Navbar.Text className="mx-5">
-            <img
-              src={cart}
-              alt="cart"
-              onClick={() => setCartIsOpened((prv) => !prv)}
-            />
-          </Navbar.Text>
-          <Navbar.Text>
-            <img src={avatar} width="50px" height="50px" alt="avatar" />
-          </Navbar.Text>
-        </Nav>
       </Navbar.Collapse>
+      <div className="d-flex align-items-center">
+        <Navbar.Text className="mx-5">
+          <img
+            src={cart}
+            alt="cart"
+            onClick={() => setCartIsOpened((prv) => !prv)}
+          />
+        </Navbar.Text>
+        <Navbar.Text className="me-4">
+          <img src={avatar} width="50px" height="50px" alt="avatar" />
+        </Navbar.Text>
+      </div>
     </Navbar>
   );
 };
