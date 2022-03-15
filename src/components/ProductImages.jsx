@@ -41,7 +41,7 @@ const ProductImages = ({ images, setIsOpened, modal }) => {
 					className={`${arrowStyle} btn-left-arrow`}
 					onClick={moveToPreviousImage}
 				>
-					<img className="arrow" src={previousArrow} alt='previous arrow' />
+					<img className="arrow prev-arrow" src={previousArrow} alt='previous arrow' />
 				</button>
 				<div onClick={() => setIsOpened(true)}>
 					<Image fluid src={image} alt={altText} />
