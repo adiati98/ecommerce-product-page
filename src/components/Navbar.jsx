@@ -5,7 +5,7 @@ import { Navbar, Nav } from "react-bootstrap";
 
 const NavBar = ({ setCartIsOpened }) => {
   return (
-    <Navbar bg="light" expand="md" className="d-flex flex-nowrap">
+    <Navbar expand="md" className="d-flex flex-nowrap">
       <Navbar.Toggle className="ms-2" />
       <Navbar.Brand className="mb-2 px-5 align-self-center">
         <img src={logo} alt="sneakers-logo" />
