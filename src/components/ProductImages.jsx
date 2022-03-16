@@ -41,19 +41,23 @@ const ProductImages = ({ images, setIsOpened, modal }) => {
 					className={`${arrowStyle} btn-left-arrow`}
 					onClick={moveToPreviousImage}
 				>
-					<img className="arrow prev-arrow" src={previousArrow} alt='previous arrow' />
+					<img
+						className='arrow prev-arrow'
+						src={previousArrow}
+						alt='previous arrow'
+					/>
 				</button>
-				<div onClick={() => setIsOpened(true)}>
+				<div className='mx-auto product-img' onClick={() => setIsOpened(true)}>
 					<Image fluid src={image} alt={altText} />
 				</div>
 				<button
 					className={`${arrowStyle} btn-right-arrow`}
 					onClick={moveToNextImage}
 				>
-					<img className="arrow" src={nextArrow} alt='next arrow' />
+					<img className='arrow' src={nextArrow} alt='next arrow' />
 				</button>
 			</div>
-			<div className='thumbnails d-flex flex-row justify-content-between'>
+			<div className='d-flex flex-row justify-content-between mx-auto thumbnails'>
 				{images.map((product, index) => (
 					<Image
 						className='thumbnail d-none d-sm-block'
