@@ -286,3 +286,11 @@ img {
 		flex-grow: 1;
 	}
 }
+
+/* footer */
+
+footer {
+  margin-top: 1.2em;
+  color: var(--dark-grayish-blue);
+  background-color: var(--light-grayish-blue);
+}

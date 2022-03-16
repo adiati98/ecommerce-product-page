@@ -1,7 +1,7 @@
 const Footer = () => {
 	return (
-		<footer>
-			<p>
+		<footer className='footer text-center py-3'>
+			<p className='my-auto'>
 				Challenge by{' '}
 				<a
 					href='https://www.frontendmentor.io?ref=challenge'
