@@ -194,6 +194,27 @@ img {
 		margin: 0;
 		padding: 0;
 	}
+
+  .arrow {
+    width: 15px;
+    height: 15px;
+    top: 0;
+  }
+
+.btn-left-arrow,
+.btn-right-arrow {
+	width: 2.5em;
+	height: 2.5em;
+	padding: 0;
+}
+
+  .btn-left-arrow {
+	left: 2em;
+}
+
+.btn-right-arrow {
+	right: 2em;
+}
 }
 
 /*popover*/
