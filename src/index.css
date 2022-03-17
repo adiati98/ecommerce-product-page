@@ -276,6 +276,10 @@ footer {
 		border-radius: 0;
 	}
 
+	.product-img {
+		width: 100%;
+	}
+
 	.product-page,
 	.product-images-column,
 	.product-details-column {

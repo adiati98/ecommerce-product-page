@@ -38,7 +38,7 @@ const PurchasePlan = ({
 	}
 
 	return (
-		<div className='w-75 d-flex justify-content-center  flex-column flex-sm-row'>
+		<div className='d-flex justify-content-center  flex-column flex-sm-row'>
 			<div className='d-flex quantity  me-auto'>
 				<button className='purchase-btn' onClick={decreaseQuantity}>
 					<img src={minus} alt='minus' />
