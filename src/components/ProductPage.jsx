@@ -12,28 +12,22 @@ const ProductPage = ({ updatePurchased }) => {
   const [isOpened, setIsOpened] = useState(false);
 
   return (
-    <Container className="product-page p-0">
-      <main>
-        <Row>
-          <Col md={6} className="product-images-column">
-            {isOpened && (
-              <ImageModal
-                imageModal={data.productImages}
-                setIsOpened={setIsOpened}
-              />
-            )}
-            <ProductImages
-              images={data.productImages}
-              setIsOpened={setIsOpened}
-            />
-          </Col>
-          <Col className="product-details-column">
-            <ProductDetails item={data} updatePurchased={updatePurchased} />
-          </Col>
-        </Row>
-      </main>
-    </Container>
-  );
+			<Container className='product-page p-0'>
+				<main>
+					<Row>
+						<Col md={6} className='product-images-column'>
+							{isOpened && (
+								<ImageModal imageModal={data.productImages} setIsOpened={setIsOpened} />
+							)}
+							<ProductImages images={data.productImages} setIsOpened={setIsOpened} />
+						</Col>
+						<Col className='product-details-column'>
+							<ProductDetails item={data} updatePurchased={updatePurchased} />
+						</Col>
+					</Row>
+				</main>
+			</Container>
+		)
 };
 
 export default ProductPage;

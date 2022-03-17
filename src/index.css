@@ -33,10 +33,6 @@ body {
 	padding-right: 1em;
 }
 
-.links {
-	width: 40%;
-}
-
 /* button */
 
 .orange-btn {
@@ -280,11 +276,7 @@ footer {
 		border-radius: 0;
 	}
 
-	.product-page {
-		margin: 0;
-		padding: 0;
-	}
-
+	.product-page,
 	.product-images-column,
 	.product-details-column {
 		margin: 0;
