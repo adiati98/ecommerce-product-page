@@ -269,6 +269,10 @@ footer {
 	.fill {
 		flex-grow: 1;
 	}
+
+	.my-modal {
+		display: none;
+	}
 }
 
 @media (max-width: 576px) {
@@ -306,9 +310,5 @@ footer {
 
 	.btn-right-arrow {
 		right: 2em;
-	}
-
-	.my-modal {
-		display: none;
 	}
 }
