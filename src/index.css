@@ -263,17 +263,6 @@ footer {
     font-size: 1.2rem;
   }
 
-  .side-nav {
-    width: 50%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    background-color: var(--white);
-    z-index: 100;
-  }
-
   .nav-menu {
     margin-left: 2em;
     padding-top: 2.5em;
