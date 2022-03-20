@@ -40,11 +40,13 @@ body {
 /* button */
 
 .orange-btn {
+  width: 60%;
+  max-width: 620px;
   background-color: var(--orange);
   color: var(--white);
   border: none;
   border-radius: 10px;
-  padding: 0.7em 4em;
+  padding: 0.7em 0;
 }
 
 /* product page */
@@ -268,6 +270,11 @@ footer {
     padding-top: 2.5em;
   }
 
+  .orange-btn {
+    width: 100%;
+    padding: 1.2em 0;
+  }
+
   .close-btn {
     display: block;
     margin-left: 2em;
@@ -280,7 +287,6 @@ footer {
 
   .quantity {
     width: 100%;
-    margin-bottom: 1.5rem;
   }
 
   .fill {
@@ -331,5 +337,9 @@ footer {
 
   .btn-right-arrow {
     right: 2em;
+  }
+
+  .quantity {
+    margin-bottom: 1.5em;
   }
 }
