@@ -1,5 +1,4 @@
 import trashBin from "../assets/images/icon-delete.svg";
-import Button from "react-bootstrap/Button";
 
 const CartModal = ({ purchased, updatePurchased }) => {
   const clearCart = () => {

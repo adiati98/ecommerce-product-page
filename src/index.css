@@ -180,8 +180,10 @@ img {
 
 .cart-popover {
   width: 350px;
+  background: var(--white);
   min-height: 200px;
   position: absolute;
+  z-index: 1;
   top: 100px;
   right: 30px;
 }
