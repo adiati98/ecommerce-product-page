@@ -6,14 +6,16 @@ const ProductDetails = ({ item, updatePurchased }) => {
 	}
 
 	return (
-		<>
-			<h1>Sneaker Company</h1>
-			<h2>{item.collection}</h2>
-			<p>{item.description}</p>
+		<div className='product-details'>
+			<h1 className='bold company-name'>Sneaker Company</h1>
+			<h2 className='bold item-collection'>{item.collection}</h2>
+			<p className='item-description'>{item.description}</p>
 
-			<p>${applyDiscount()}</p>
-			<p>{item.discount}%</p>
-			<p>${item.price}</p>
+			<p className='bold applied-discount'>
+				${applyDiscount()}{' '}
+				<span className='bold item-discount'>{item.discount}%</span>
+			</p>
+			<p className='item-price'>${item.price}</p>
 
 			<PurchasePlan
 				updatePurchased={updatePurchased}
@@ -22,7 +24,7 @@ const ProductDetails = ({ item, updatePurchased }) => {
 				thumbnail={item.productImages[0].thumbnail}
 				thumbnailAltText={item.productImages[0].thumbnailAltText}
 			/>
-		</>
+		</div>
 	)
 }
 

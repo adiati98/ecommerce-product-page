@@ -1,24 +1,44 @@
 import logo from "../assets/images/logo.svg";
 import cart from "../assets/images/icon-cart.svg";
 import avatar from "../assets/images/image-avatar.png";
+import { Navbar, Nav, Offcanvas } from "react-bootstrap";
 
-const Navbar = ({ cartIsClicked }) => {
+const NavBar = ({ setCartIsOpened }) => {
   return (
-    <header>
-      <img src={logo} alt="sneakers-logo" />
-      <nav>
-        <ul>
-          <li>Collections</li>
-          <li>Men</li>
-          <li>Women</li>
-          <li>About</li>
-          <li>contact</li>
-        </ul>
-      </nav>
-      <img src={cart} alt="cart" onClick={cartIsClicked}/>
-      <img src={avatar} alt="avatar" />
-    </header>
+    <Navbar expand="md" className="d-flex justify-content-start flex-nowrap">
+      <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-2" />
+      <Navbar.Brand className="mb-2 me-auto ps-1 align-self-center">
+        <img src={logo} alt="sneakers-logo" />
+      </Navbar.Brand>
+      <Navbar.Offcanvas
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
+        <Offcanvas.Header closeButton closeLabel />
+        <Offcanvas.Body>
+          <Nav className="d-flex align-items-md-center justify-content-evenly me-auto ms-md-5 nav-menu">
+            <Nav.Link href="#collection">Collections</Nav.Link>
+            <Nav.Link href="#men">Men</Nav.Link>
+            <Nav.Link href="#women">Women</Nav.Link>
+            <Nav.Link href="#about">About</Nav.Link>
+            <Nav.Link href="#contact">Contact</Nav.Link>
+          </Nav>
+        </Offcanvas.Body>
+      </Navbar.Offcanvas>
+      <div className="d-flex align-items-center">
+        <Navbar.Text className="me-3">
+          <img
+            src={cart}
+            alt="cart"
+            onClick={() => setCartIsOpened((prv) => !prv)}
+          />
+        </Navbar.Text>
+        <Navbar.Text>
+          <img src={avatar} width="50px" height="50px" alt="avatar" />
+        </Navbar.Text>
+      </div>
+    </Navbar>
   );
 };
 
-export default Navbar;
+export default NavBar;

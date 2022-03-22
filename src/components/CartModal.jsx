@@ -1,33 +1,42 @@
-import trashBin from '../assets/images/icon-delete.svg'
+import trashBin from "../assets/images/icon-delete.svg";
 
 const CartModal = ({ purchased, updatePurchased }) => {
-	const clearCart = () => {
-		updatePurchased(null)
-	}
+  const clearCart = () => {
+    updatePurchased(null);
+  };
 
-	return (
-		<>
-			<p>Cart</p>
-			<hr />
-			{!purchased ? (
-				<p>Your cart is empty</p>
-			) : (
-				<>
-					<div>
-						<img src={purchased.thumbnail} alt={purchased.thumbnailAltText} />
-					</div>
-					<p>{purchased.title}</p>
-					<p>{purchased.quantity}</p>
-					<p>{purchased.discountedPrice}</p>
-					<p>{(purchased.quantity * purchased.discountedPrice).toFixed(2)}</p>
-					<button onClick={clearCart}>
-						<img src={trashBin} alt='delete' />
-					</button>
-					<button>Checkout</button>
-				</>
-			)}
-		</>
-	)
-}
+  return (
+    <div className="cart-popover d-flex flex-column shadow rounded pb-3">
+      <p className="border-bottom py-3 bold">Cart</p>
+      {!purchased ? (
+        <p className="m-auto">Your cart is empty</p>
+      ) : (
+        <>
+          <div className="d-flex flex-row  justify-content-between">
+            <div className="popover-image">
+              <img src={purchased.thumbnail} alt={purchased.thumbnailAltText} />
+            </div>
+            <div className="d-flex flex-column justify-content-center ">
+              <p className="mb-0">{purchased.title}</p>
+              <p>
+                {purchased.discountedPrice} x <span>{purchased.quantity}</span>{" "}
+                <span className="bold">
+                  {(purchased.quantity * purchased.discountedPrice).toFixed(2)}
+                </span>
+              </p>
+            </div>
+            <button
+              onClick={clearCart}
+              className="trash-icon align-self-center mb-2 "
+            >
+              <img src={trashBin} alt="delete" />
+            </button>
+          </div>
+          <button className="bold orange-btn">Checkout</button>
+        </>
+      )}
+    </div>
+  );
+};
 
-export default CartModal
+export default CartModal;

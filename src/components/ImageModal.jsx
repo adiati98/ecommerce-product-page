@@ -1,13 +1,19 @@
-import ProductImages from './ProductImages'
-import close from '../assets/images/icon-close.svg'
+import ReactDOM from "react-dom";
+import ProductImages from "./ProductImages";
+import close from "../assets/images/icon-close.svg";
 
 const ImageModal = ({ imageModal, setIsOpened }) => {
-	return (
-		<div>
-			<img src={close} alt='close' onClick={() => setIsOpened(false)} />
-			<ProductImages images={imageModal} arrows />
-		</div>
-	)
-}
+  return ReactDOM.createPortal(
+    <div className="my-modal">
+      <div className="my-modal-content">
+        <button className="close-btn mb-3" onClick={() => setIsOpened(false)}>
+          <img src={close} alt="close" />
+        </button>
+        <ProductImages images={imageModal} modal />
+      </div>
+    </div>,
+    document.body
+  );
+};
 
-export default ImageModal
+export default ImageModal;
