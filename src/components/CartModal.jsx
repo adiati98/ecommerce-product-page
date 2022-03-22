@@ -6,8 +6,8 @@ const CartModal = ({ purchased, updatePurchased }) => {
   };
 
   return (
-    <div className="cart-popover d-flex flex-column shadow rounded p-4">
-      <p className="border-bottom pb-2 bold">Cart</p>
+    <div className="cart-popover d-flex flex-column shadow rounded pb-3">
+      <p className="border-bottom py-3 bold">Cart</p>
       {!purchased ? (
         <p className="m-auto">Your cart is empty</p>
       ) : (
