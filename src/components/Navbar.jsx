@@ -7,9 +7,16 @@ const NavBar = ({ setCartIsOpened }) => {
   return (
     <Navbar expand="md" className="d-flex justify-content-start flex-nowrap">
       <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-2" />
-      <Navbar.Brand className="mb-2 me-auto ps-1 align-self-center">
+      <Navbar.Brand className="mb-2 me-auto me-md-5 ps-1 align-self-center">
         <img src={logo} alt="sneakers-logo" />
       </Navbar.Brand>
+      <Nav className="me-auto  nav-menu hide">
+        <Nav.Link href="#collection">Collections</Nav.Link>
+        <Nav.Link href="#men">Men</Nav.Link>
+        <Nav.Link href="#women">Women</Nav.Link>
+        <Nav.Link href="#about">About</Nav.Link>
+        <Nav.Link href="#contact">Contact</Nav.Link>
+      </Nav>
       <Navbar.Offcanvas
         id="offcanvasNavbar"
         aria-labelledby="offcanvasNavbarLabel"

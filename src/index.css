@@ -298,6 +298,9 @@ footer {
   .my-modal {
     display: none;
   }
+  .hide {
+    display: none !important;
+  }
 }
 
 @media (max-width: 576px) {
@@ -343,5 +346,8 @@ footer {
 
   .quantity {
     margin-bottom: 1.5em;
+  }
+  .hide {
+    display: none !important;
   }
 }
