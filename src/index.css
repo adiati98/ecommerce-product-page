@@ -251,6 +251,11 @@ img {
   fill: var(--white);
 }
 
+.fill {
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
 /* footer */
 
 footer {
