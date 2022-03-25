@@ -10,7 +10,7 @@ const NavBar = ({ setCartIsOpened }) => {
       <Navbar.Brand className="mb-2 me-auto me-md-5 ps-1 align-self-center">
         <img src={logo} alt="sneakers-logo" />
       </Navbar.Brand>
-      <Nav className="me-auto  nav-menu hide">
+      <Nav className="me-auto nav-menu hide">
         <Nav.Link href="#collection">Collections</Nav.Link>
         <Nav.Link href="#men">Men</Nav.Link>
         <Nav.Link href="#women">Women</Nav.Link>
