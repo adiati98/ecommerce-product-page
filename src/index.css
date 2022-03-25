@@ -25,12 +25,19 @@ body {
   min-height: 100vh;
   background: var(--light-grayish-blue);
 }
-
+img {
+  cursor: pointer;
+}
 /* navbar */
 
 .navbar {
   border-bottom: 1px solid var(--grayish-blue);
   padding-right: 1em;
+}
+
+.nav-link:hover {
+  border-bottom: 4px solid var(--orange);
+  padding-bottom: 6px;
 }
 
 /* button */
@@ -78,6 +85,16 @@ img {
 
 .thumbnail {
   width: 20%;
+}
+
+.thumbnail:hover,
+.orange-btn:hover {
+  opacity: 0.5;
+}
+
+.thumbnail:focus {
+  opacity: 0.5;
+  border: 5px solid var(--orange);
 }
 
 .arrow {
