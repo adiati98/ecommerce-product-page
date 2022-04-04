@@ -2,8 +2,9 @@ import logo from "../assets/images/logo.svg";
 import cart from "../assets/images/icon-cart.svg";
 import avatar from "../assets/images/image-avatar.png";
 import { Navbar, Nav, Offcanvas } from "react-bootstrap";
+import Quantity from "./Quantity";
 
-const NavBar = ({ setCartIsOpened }) => {
+const NavBar = ({ setCartIsOpened, purchased }) => {
   return (
     <Navbar expand="md" className="d-flex justify-content-start flex-nowrap">
       <Navbar.Toggle aria-controls="offcanvasNavbar" className="ms-2" />
@@ -33,15 +34,24 @@ const NavBar = ({ setCartIsOpened }) => {
         </Offcanvas.Body>
       </Navbar.Offcanvas>
       <div className="d-flex align-items-center">
-        <Navbar.Text className="me-3">
+        <Navbar.Text className="me-5 cart-wrapper">
+          <Quantity purchased={purchased} />
           <img
             src={cart}
             alt="cart"
+            width="35px"
+            height="35px"
             onClick={() => setCartIsOpened((prv) => !prv)}
           />
         </Navbar.Text>
         <Navbar.Text>
-          <img src={avatar} width="50px" height="50px" alt="avatar" />
+          <img
+            className="avatar"
+            src={avatar}
+            width="50px"
+            height="50px"
+            alt="avatar"
+          />
         </Navbar.Text>
       </div>
     </Navbar>

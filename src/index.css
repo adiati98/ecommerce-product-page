@@ -49,6 +49,32 @@ img {
 	border-bottom: 4px solid var(--orange);
 }
 
+.cart-wrapper {
+  position: relative;
+}
+
+.cart-quantity {
+  position: absolute;
+  top: 0;
+  right: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--orange);
+  color: white;
+}
+
+.avatar:hover {
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+
 /* button */
 
 .orange-btn {
