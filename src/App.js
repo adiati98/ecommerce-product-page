@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar setCartIsOpened={setCartIsOpened} purchased={purchased} />
+      <Navbar setCartIsOpened={setCartIsOpened} cartIsOpened={cartIsOpened} purchased={purchased} />
       {cartIsOpened && (
         <CartModal purchased={purchased} updatePurchased={setPurchased} />
       )}

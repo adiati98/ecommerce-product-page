@@ -1,10 +1,22 @@
+import { useEffect, useRef } from 'react'
 import logo from "../assets/images/logo.svg";
 import cart from "../assets/images/icon-cart.svg";
 import avatar from "../assets/images/image-avatar.png";
 import { Navbar, Nav, Offcanvas } from "react-bootstrap";
 import Quantity from "./Quantity";
 
-const NavBar = ({ setCartIsOpened, purchased }) => {
+const NavBar = ({ setCartIsOpened, cartIsOpened, purchased }) => {
+	const cartRef = useRef()
+
+	useEffect(() => {
+    cartRef.current.addEventListener("keypress", (e) => {
+      if (e.key === 'Enter') {
+        setCartIsOpened(prevState => !prevState)
+    }
+  })
+  },[setCartIsOpened])
+
+
   return (
 			<Navbar expand='md' className='d-flex justify-content-start flex-nowrap'>
 				<Navbar.Toggle aria-controls='offcanvasNavbar' className='ms-2' />
@@ -42,7 +54,8 @@ const NavBar = ({ setCartIsOpened, purchased }) => {
 							alt='cart'
 							width='40px'
 							height='40px'
-							tabindex='0'
+							tabIndex='0'
+							ref = {cartRef}
 							onClick={() => setCartIsOpened((prv) => !prv)}
 						/>
 					</Navbar.Text>
@@ -53,7 +66,7 @@ const NavBar = ({ setCartIsOpened, purchased }) => {
 							width='50px'
 							height='50px'
 							alt='avatar'
-							tabindex='0'
+							tabIndex={cartIsOpened ? '1' : '0'}
 						/>
 					</Navbar.Text>
 				</div>

@@ -32,7 +32,7 @@ const CartModal = ({ purchased, updatePurchased }) => {
               <img src={trashBin} alt="delete" />
             </button>
           </div>
-          <button className="bold orange-btn">Checkout</button>
+          <button tabIndex="0" className="bold orange-btn">Checkout</button>
         </>
       )}
     </div>
