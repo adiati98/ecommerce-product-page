@@ -6,23 +6,17 @@ import { Navbar, Nav, Offcanvas } from 'react-bootstrap'
 import Quantity from './Quantity'
 
 const NavBar = ({ setCartIsOpened, cartIsOpened, purchased }) => {
-	const cartRef = useRef()
+	const cartIconRef = useRef()
 
 	useEffect(() => {
-		const cart = cartRef.current
+		const cart = cartIconRef.current
 		cart.addEventListener('keypress', (e) => {
 			if (e.key === 'Enter') {
 				setCartIsOpened((prevState) => !prevState)
 			}
 		})
-		document.addEventListener('mousedown', (e) => {
-			if (cartRef && !cart.contains(e.target)) {
-				setCartIsOpened(false)
-			}
-		})
 		return () => {
 			cart.removeEventListener('keypress')
-			document.removeEventListener('mousedown')
 		}
 	}, [setCartIsOpened])
 
@@ -59,12 +53,12 @@ const NavBar = ({ setCartIsOpened, cartIsOpened, purchased }) => {
 					<Quantity purchased={purchased} />
 					<img
 						className='p-1'
+						ref={cartIconRef}
 						src={cart}
 						alt='cart'
 						width='40px'
 						height='40px'
 						tabIndex='0'
-						ref={cartRef}
 						onClick={() => setCartIsOpened((prv) => !prv)}
 					/>
 				</Navbar.Text>

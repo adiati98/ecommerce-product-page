@@ -1,12 +1,29 @@
+import { useEffect, useRef } from "react";
 import trashBin from "../assets/images/icon-delete.svg";
 
-const CartModal = ({ purchased, updatePurchased }) => {
+const CartModal = ({ purchased, updatePurchased, setCartIsOpened }) => {
   const clearCart = () => {
     updatePurchased(null);
   };
+  const cartRef = useRef()
+
+  useEffect(() => {
+    const closeCart = (e) => {
+      const cart = cartRef.current
+      if (cart && !cart.contains(e.target)) {
+        setCartIsOpened(false)
+      }
+    }
+		document.addEventListener('mousedown', closeCart)
+
+    return () => document.removeEventListener('mousedown', closeCart)
+    
+
+	}, [setCartIsOpened,])
+
 
   return (
-    <div className="cart-popover d-flex flex-column shadow rounded pb-3">
+    <div ref={cartRef} className="cart-popover d-flex flex-column shadow rounded pb-3">
       <p className="border-bottom py-3 bold">Cart</p>
       {!purchased ? (
         <p className="m-auto">Your cart is empty</p>

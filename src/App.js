@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Navbar setCartIsOpened={setCartIsOpened} cartIsOpened={cartIsOpened} purchased={purchased} />
       {cartIsOpened && (
-        <CartModal purchased={purchased} updatePurchased={setPurchased} />
+        <CartModal purchased={purchased} updatePurchased={setPurchased} setCartIsOpened={setCartIsOpened}/>
       )}
       <ProductPage updatePurchased={setPurchased} />
       <Footer />
